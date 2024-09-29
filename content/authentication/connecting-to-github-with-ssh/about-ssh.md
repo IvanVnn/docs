@@ -27,7 +27,36 @@ To maintain account security, you can regularly review your SSH keys list and re
 {% ifversion fpt or ghec %}
 If you haven't used your SSH key for a year, then {% data variables.product.prodname_dotcom %} will automatically delete your inactive SSH key as a security precaution. For more information, see "[Deleted or missing SSH keys](/articles/deleted-or-missing-ssh-keys)."
 {% endif %}
-
+---
+title: Connecting to GitHub with SSH
+intro: 'You can connect to {% data variables.product.product_name %} using the Secure Shell Protocol (SSH), which provides a secure channel over an unsecured network.'
+redirect_from:
+  - /key-setup-redirect
+    - /linux-key-setup
+      - /mac-key-setup
+        - /msysgit-key-setup
+          - /articles/ssh-key-setup
+            - /articles/generating-ssh-keys
+              - /articles/generating-an-ssh-key
+                - /articles/connecting-to-github-with-ssh
+                  - /github/authenticating-to-github/connecting-to-github-with-ssh
+                  versions:
+                    fpt: '*'
+                      ghes: '*'
+                        ghae: '*'
+                          ghec: '*'
+                          topics:
+                            - SSH
+                            children:
+                              - /about-ssh
+                                - /checking-for-existing-ssh-keys
+                                  - /generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+                                    - /adding-a-new-ssh-key-to-your-github-account
+                                      - /testing-your-ssh-connection
+                                        - /working-with-ssh-key-passphrases
+                                        shortTitle: Connect with SSH
+                                        ---
+                                        
 {% ifversion fpt %}
 Organizations that use {% data variables.product.prodname_ghe_cloud %} can provide SSH certificates, which members can use to access that organization's repositories without adding the certificate to their account on {% data variables.product.product_name %}. If you're using an SSH certificate, you cannot use the certificate to access forks of the organization's repositories, if the fork is owned by your personal account. For more information, see "[About SSH certificate authorities](/enterprise-cloud@latest/organizations/managing-git-access-to-your-organizations-repositories/about-ssh-certificate-authorities)" in the {% data variables.product.prodname_ghe_cloud %} documentation.
 {% else ghec or ghes or ghae %}
